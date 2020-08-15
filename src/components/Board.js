@@ -5,9 +5,6 @@ import Square from './Square';
 
 
 
-
-
-
 export default class Board extends Component {
 
 	renderSquare(i) {

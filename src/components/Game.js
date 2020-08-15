@@ -14,7 +14,14 @@ export default class Game extends Component {
 
 		super(props);
 		this.state = {
-			xIsNext: true
+			xIsNext: true,
+			stepNumber: 0,
+			history: [
+			{
+				squares: Array(9).fill(null)
+			 }
+			 
+			]
 		}
 
 	}
