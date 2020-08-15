@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import Square from './Square';
+// import Square from './Square';
+
+import Board from './Board';
 
 
 
@@ -20,7 +22,7 @@ export default class Game extends Component {
 			{
 				squares: Array(9).fill(null)
 			 }
-			 
+
 			]
 		}
 
@@ -29,13 +31,31 @@ export default class Game extends Component {
 
 	render() {
 
+		const history = this.state.history;
+
+		const current = history[this.state.stepNumber];
+		
+
+
+
 		return (
 
-			<div>
+			<div className="game">
+
+			<div className="game-board">
+
+			<Board onClick={(i) => this.handleClick(i)}
+			squares={current.squares} />
+
+			</div>	
+
+			<div className="game-info">
 
 
 
-			
+
+			</div>
+
 			</div>
 
 
