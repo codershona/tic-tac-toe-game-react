@@ -43,10 +43,7 @@ export default class Game extends Component {
     	return;
     }
 
-  
-
-
-
+ 
     squares[i] = this.state.xIsNext ? 'X' :'O';
     this.setState({
     	history: history.concat({
@@ -68,6 +65,32 @@ export default class Game extends Component {
 		const history = this.state.history;
 
 		const current = history[this.state.stepNumber];
+
+		const winner = calculateWinner(current.squares);
+
+		const moves = history.map((step, move) => {
+
+       const desc = move ? 'GO TO #' + move : 'START THE GAME!!';
+
+       return (
+
+       	<li key={move}>
+       	<button onClick={() => { this.jumpTo(move) }}>
+       	
+       	 {desc}
+
+
+       	</button>
+
+
+
+       	</li>
+
+
+       	)
+
+
+		});
 
 
 
