@@ -36,6 +36,13 @@ export default class Game extends Component {
 
     const squares = current.squares.slice();
 
+    const winner = calculateWinner(current.squares);
+
+    if(winner || squares[i]) {
+
+    	return;
+    }
+
   
 
 
@@ -92,11 +99,6 @@ export default class Game extends Component {
 }
 
 
-
-  {/* calculate winners in component board   */} 
-
-
-
   function calculateWinner(squares) {
 
   	const lines = [
@@ -114,6 +116,16 @@ export default class Game extends Component {
 
 
   	];
+
+  	for(let i=0; i < lines.length; i++) {
+
+  		const [a, b, c] = lines[i];
+
+  		if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c])  {
+
+  			return squares[a];
+  		}
+  	}
 
 
    
