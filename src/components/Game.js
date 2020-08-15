@@ -76,7 +76,7 @@ export default class Game extends Component {
 
        	<li key={move}>
        	<button onClick={() => { this.jumpTo(move) }}>
-       	
+
        	 {desc}
 
 
@@ -91,6 +91,16 @@ export default class Game extends Component {
 
 
 		});
+
+		let status;
+		if(winner) {
+			status = 'Winner is' + winner;
+
+		} else {
+
+			status = 'Next Player is ' + (this.state.xIsNext ? 'X' : 'O');
+
+		}
 
 
 
@@ -108,8 +118,9 @@ export default class Game extends Component {
 
 			<div className="game-info">
 
+             <div>{status}</div>
 
-
+       <ul>{moves}</ul>
 
 			</div>
 
