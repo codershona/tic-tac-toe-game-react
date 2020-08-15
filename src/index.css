@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.square {
+	background: white;
+	border: 2px solid gray;
+	float: left;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: 0;
+	width: 81px;
+	height: 81px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 80px;
+
+
+}
+
+
+.square:focus {
+
+
+	outline: none;
+
+	
+}
+
+/* board */
+
+.board-row:after {
+
+	clear: both;
+
+	content: "";
+
+	display: table;
+
+}
