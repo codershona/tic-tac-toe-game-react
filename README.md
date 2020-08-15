@@ -12,8 +12,13 @@
 		* Extracting and Composing Components ;
 		* Manage state in Components ;
 		* Lifting state up ;
+		
+```
 
-    ### Ready to deploy on Firebase :
+ ### Ready to deploy on Firebase :
+
+```
+
 		- npm install -g react-scripts ;
 		- react-scripts start ;
 		- yarn start ;
