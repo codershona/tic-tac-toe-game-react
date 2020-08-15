@@ -1,4 +1,4 @@
-# Tic TAc Toe Game in Reactjs
+# Tic Tac Toe Game in Reactjs
 
 #### Project Can be found in here :
  **[Live version](https://tic-tac-toe-game-c7404.web.app)**
